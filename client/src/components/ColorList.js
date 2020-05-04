@@ -56,7 +56,6 @@ const ColorList = ({ colors, updateColors, fetchColors }, props) => {
             updateColors(res.data);
           })
           .catch((err) => {
-            console.log();
             console.log(res.data.payload);
           })
           .catch((err) => {
@@ -66,7 +65,7 @@ const ColorList = ({ colors, updateColors, fetchColors }, props) => {
   };
 
   const handleChange = (e) => {
-    setMoreColors({ ...moreColors, [e.target.name]: e.target.value });
+    setMoreColors({ ...moreColors, color: e.target.value });
   };
   const hexChange = (e) => {
     setMoreColors({ ...moreColors, code: { hex: e.target.value } });
@@ -132,7 +131,7 @@ const ColorList = ({ colors, updateColors, fetchColors }, props) => {
         <legend>Add More Colors</legend>
         <label>
           Color Name
-          <input type="text" name="New Color" onChange={handleChange} />
+          <input type="text" name="new color" onChange={handleChange} />
         </label>
         <label>
           Hex Code
