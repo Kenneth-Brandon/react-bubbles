@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
 html,
 body,
@@ -8,10 +8,12 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  background: linear-gradient(to left, #000000 0%, #00007c 50%, #0000f8 100%);
+  color: #f4d7d7;
 }
 
 .App {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
   display: flex;
 
@@ -21,19 +23,31 @@ body,
 }
 
 .spacer {
-  height: 100%;
+  height: 3%;
+}
+
+.Add {
+  border: none;
+  background-color: black;
+  color: white;
+  padding: 3px 8px;
+  margin-top: 16px;
+  margin-left: 30%;
+  width: 30%;
 }
 
 .bubble-wrap {
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  color: #f4d7d7;
 }
 
 .colors-wrap {
-  height: 100%;
+  height: 105%;
   width: 300px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  color: #f4d7d7;
 
   ul {
     list-style: none;
@@ -61,16 +75,19 @@ body,
 }
 
 form {
-  margin-top: 60px;
+  margin-top: 0%;
+  margin-bottom: 20%;
   display: flex;
   flex-direction: column;
 
   legend {
     padding-left: 40px;
-    font-weight: bold;
-    text-align: left;
-    text-decoration: underline;
     margin-bottom: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Wendy One', sans-serif;
+    font-size: 16px;
   }
 
   label {
@@ -96,4 +113,29 @@ form {
     padding: 3px 8px;
     margin-top: 16px;
   }
+}
+
+.login-form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Wendy One', sans-serif;
+  font-size: 30px;
+
+  input {
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  button {
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+
+p {
+  font-family: 'Wendy One', sans-serif;
+  font-size: 20px;
 }
