@@ -74,7 +74,7 @@ const ColorList = ({ colors, updateColors, fetchColors }, props) => {
 
   return (
     <div className="colors-wrap">
-      <p>colors</p>
+      <p>Colors</p>
       <ul>
         {colors.map((color) => (
           <li key={color.color} onClick={() => editColor(color)}>
@@ -86,8 +86,8 @@ const ColorList = ({ colors, updateColors, fetchColors }, props) => {
                   deleteColor(color);
                 }}
               >
-                x
-              </span>{' '}
+                X
+              </span>
               {color.color}
             </span>
             <div
@@ -99,9 +99,9 @@ const ColorList = ({ colors, updateColors, fetchColors }, props) => {
       </ul>
       {editing && (
         <form onSubmit={saveEdit}>
-          <legend>edit color</legend>
+          <legend>Edit Color</legend>
           <label>
-            color name:
+            Color Name:
             <input
               onChange={(e) =>
                 setColorToEdit({ ...colorToEdit, color: e.target.value })
@@ -110,7 +110,7 @@ const ColorList = ({ colors, updateColors, fetchColors }, props) => {
             />
           </label>
           <label>
-            hex code:
+            Hex Code:
             <input
               onChange={(e) =>
                 setColorToEdit({
@@ -122,8 +122,8 @@ const ColorList = ({ colors, updateColors, fetchColors }, props) => {
             />
           </label>
           <div className="button-row">
-            <button type="submit">save</button>
-            <button onClick={() => setEditing(false)}>cancel</button>
+            <button type="submit">Save</button>
+            <button onClick={() => setEditing(false)}>Cancel</button>
           </div>
         </form>
       )}
@@ -135,7 +135,6 @@ const ColorList = ({ colors, updateColors, fetchColors }, props) => {
           <input type="text" name="New Color" onChange={handleChange} />
         </label>
         <label>
-          {' '}
           Hex Code
           <input type="text" name="hex code" onChange={hexChange} />
         </label>
